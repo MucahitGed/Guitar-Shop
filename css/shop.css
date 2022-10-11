@@ -1,0 +1,217 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Seaweed Script', cursive;
+}
+header{
+    background-color: black;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: fixed;
+    top: -100px;
+    /* transform: rotate(180deg); gonna rotate */
+    
+}
+header.unRotated{
+    animation: unRotation;
+    animation-duration: 4s;
+}
+header.rotated{
+    transform: rotate(180deg);
+    animation: rotation;
+    animation-duration: 4s;
+}
+@keyframes rotation{
+    0%   {transform: rotate(0deg)}
+    100% {transform: rotate(180deg)}
+}
+@keyframes unRotation{
+    0%   {transform: rotate(180deg)}
+    100% {transform: rotate(360deg)}
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    padding: 25px 0px;
+}
+nav ul li a , ul i{
+    color: white;
+}
+nav ul li a:hover ,ul i:hover{
+    color: var(--main-blue);
+}
+nav ul li:nth-child(1){
+    transform: rotate(-230deg);
+    font-size:3rem
+}
+nav ul li:nth-child(1) a{
+    transform: rotateY(30deg);
+}
+nav ul li:nth-child(3){
+    transform: rotate(230deg);
+    font-size:3rem
+}
+.icon{
+    margin: 15px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+#icon-open{
+    font-size: 4rem;
+    color: #fff;
+}
+#icon-open:hover{
+    color: var(--main-blue);
+}
+#icon-close{
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.btn{
+    background-color: transparent;
+    border: none;
+}
+/* main */
+.background-port{
+    height: 50vh;
+    width: 100vw;
+    background-image: url('../img/4.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    font-size: 3rem;
+    color: #fff;
+}
+.background-port::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.2);
+}
+.products{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+.product{
+    width: 20vw;
+    height: 50vh;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-top: 1px solid var(--beige);
+}
+.product-content{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    /* background-color: rgba(0,0,0,.5); */
+}
+.title{
+    margin-top: 30px;
+    font-size: 3rem;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin-top: 80px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 180px;
+}
+.price-title{
+    font-size: 3rem;
+}
+.buy{
+    background-color: var(--beige);
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.buy:hover{
+    background-color: #000;
+    color: var(--beige);
+    border: 1px solid var(--beige);
+}
+.music-btn{
+    background:none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.music-btn:hover{
+    color: var(--beige);
+}
+.product-1{
+    background-image: url('../img/sell/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+    border-right: 1px solid var(--beige);
+    
+}
+.product-2{
+    background-image: url('../img/sell/2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+    border-right: 1px solid var(--beige);
+ 
+}
+.product-3{
+    background-image: url('../img/sell/3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+    border-right: 1px solid var(--beige);
+  
+}
+.product-4{
+    background-image: url('../img/sell/4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+    border-right: 1px solid var(--beige);
+  
+}
+.product-5{
+    background-image: url('../img/sell/5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+}

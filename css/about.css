@@ -1,0 +1,125 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Seaweed Script', cursive;
+    background-color: #f2ead3;
+    overflow: hidden;
+}
+header{
+    background-color: transparent;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: fixed;
+    top: -100px;
+    z-index: 1;
+    /* transform: rotate(180deg); gonna rotate */
+    
+}
+header.unRotated{
+    animation: unRotation;
+    animation-duration: 4s;
+}
+header.rotated{
+    transform: rotate(180deg);
+    animation: rotation;
+    animation-duration: 4s;
+}
+@keyframes rotation{
+    0%   {transform: rotate(0deg)}
+    100% {transform: rotate(180deg)}
+}
+@keyframes unRotation{
+    0%   {transform: rotate(180deg)}
+    100% {transform: rotate(360deg)}
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    padding: 25px 0px;
+}
+nav ul li a , ul i{
+    color: black;
+}
+nav ul li a:hover ,ul i:hover{
+    color: var(--beige);
+}
+nav ul li:nth-child(1){
+    transform: rotate(-230deg);
+    font-size:3rem
+}
+nav ul li:nth-child(1) a{
+    transform: rotateY(30deg);
+}
+nav ul li:nth-child(3){
+    transform: rotate(230deg);
+    font-size:3rem
+}
+.icon{
+    margin: 15px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+#icon-open{
+    font-size: 4rem;
+    color: black;
+}
+#icon-open:hover{
+    color: var(--beige);
+}
+#icon-close{
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.btn{
+    background-color: transparent;
+    border: none;
+}
+/* main */
+.main-section{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    height: 60vh;
+    width: 100%;
+}
+.card{
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+.card-left{
+    width: 50%;
+    height: 100%;
+    background-image: url('../img/about/3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+.card-right{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    padding: 60px 30px;
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+}
+p{
+    margin-top: 30px;
+}
+h1{
+    font-size: 5rem;
+    margin: 30px;
+}
